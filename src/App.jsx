@@ -5,6 +5,8 @@ function App() {
   return (
     <div className="flex justify-center">
       <div>Hello</div>
+      <div>Hello</div>
+      <div>Hello</div>
     </div>
   );
 }
