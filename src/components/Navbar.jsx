@@ -51,10 +51,11 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-white">
-        <div className="grid grid-cols-3 flex-1 items-center py-10 mx-auto">
-          {/* Social */}
-          <div className="mx-10">
-            <button className="hidden md:flex bg-black p-3 rounded-full">
+        <div className="grid grid-cols-3 flex-1 items-center py-10 mx-10">
+          {/* Social Contact Us */}
+          <div className="md:hidden"></div>
+          <div className="hidden md:flex gap-4">
+            <button className=" bg-black p-3 rounded-full">
               <svg
                 class="w-6 h-6 text-gray-800 dark:text-white"
                 aria-hidden="true"
@@ -69,6 +70,9 @@ const Navbar = () => {
                 />
               </svg>
             </button>
+            <button className="bg-black text-white py-3 px-6 rounded-full">
+              Contact Us
+            </button>
           </div>
 
           {/* Home - Business Name/Logo */}
@@ -80,31 +84,31 @@ const Navbar = () => {
                 Remodeling
               </Link>
             </div>
-
-            <div className="hidden md:flex text-black">
-              <NavLink to="/services" className={activeLink}>
-                Services
-              </NavLink>
-
-              <NavLink to="/gallery" className={activeLink}>
-                Galley
-              </NavLink>
-
-              <NavLink to="/testimonials" className={activeLink}>
-                Testimonials
-              </NavLink>
-
-              <NavLink to="/about" className={activeLink}>
-                About
-              </NavLink>
-            </div>
           </div>
-          {/* Actions Contact Us */}
-          <div className="hidden md:flex justify-end mx-10">
-            <button className="bg-black text-white py-2 px-6 rounded-full">
-              Contact Us
-            </button>
+          {/* Nav Menu */}
+
+          <div
+            className={`md:flex text-black  ${
+              mobileMenuActive ? "block" : "hidden"
+            }`}
+          >
+            <NavLink to="/services" className={activeLink}>
+              Services
+            </NavLink>
+
+            <NavLink to="/gallery" className={activeLink}>
+              Galley
+            </NavLink>
+
+            <NavLink to="/testimonials" className={activeLink}>
+              Testimonials
+            </NavLink>
+
+            <NavLink to="/about" className={activeLink}>
+              About
+            </NavLink>
           </div>
+
           {/* Mobile Menu */}
           <div className="md:hidden flex justify-end items-center mx-10">
             {/* Mobile Menu Button */}
@@ -114,7 +118,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* Mobile Menu List */}
-        <div
+        {/* <div
           className={`md:hidden py-5 fixed w-full h-full left-0 right-0 z-10 bg-red-300 ${
             mobileMenuActive ? "block" : "hidden"
           }`}
@@ -122,7 +126,7 @@ const Navbar = () => {
           <a href="#">Serv</a>
           <a href="#">Gal</a>
           <a href="#">Test</a>
-        </div>
+        </div> */}
       </nav>
     </>
   );
