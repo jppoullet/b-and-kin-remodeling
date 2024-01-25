@@ -117,8 +117,8 @@ const Navbar = () => {
             </NavLink>
           </div>
 
-          {/* Mobile Menu */}
-          <div className="md:hidden flex justify-end items-center mx-10">
+          {/* Mobile Menu Button*/}
+          <div className="md:hidden flex justify-end items-center">
             {/* Mobile Menu Button */}
             <button className="" onClick={mobileMenuActiveHandler}>
               {mobileMenuActive ? closeMenu : openMenu}
@@ -126,10 +126,10 @@ const Navbar = () => {
           </div>
         </div>
         {/* Mobile Menu List */}
-        <div className="overflow-hidden absolute w-full">
+        <div className="overflow-hidden border border-yellow-400 absolute w-full h-full">
           <div
-            className={`flex flex-col items-center md:hidden w-full h-screen bg-red-300 transition duration-500 ease-in-out ${
-              mobileMenuActive ? "translate-y-0" : "-translate-y-full"
+            className={`flex flex-col items-center md:hidden w-full h-full bg-red-700 transition duration-500 ease-in-out ${
+              mobileMenuActive ? "translate-y-0 " : "-translate-y-full"
             }`}
           >
             <NavLink

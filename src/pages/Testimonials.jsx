@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <div>
+    <div className="mx-10">
       <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
         obcaecati velit ab, delectus quibusdam minus facilis illum molestias
