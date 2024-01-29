@@ -2,15 +2,14 @@ import React from "react";
 import GallerySection from "../sections/GallerySection";
 import ServicesSection from "../sections/ServicesSection";
 import ContactSection from "../sections/ContactSection";
+import HomePageImg from "../assets/HomePageImg.jpg";
+import ContactCard from "../cards/ContactCard";
 
 const Home = () => {
   return (
     <div className="mx-10">
       <div>
-        <img
-          src="https://www.adobe.com/content/dam/cc/us/en/creativecloud/photography/discover/stock-photography/thumbnail.jpeg"
-          alt="homepage-img"
-        />
+        <img src={HomePageImg} alt="homepage-img" />
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vero,
@@ -18,7 +17,8 @@ const Home = () => {
         ipsam adipisci fuga. Maxime esse in distinctio cum, suscipit amet
         excepturi?
       </p>
-      <div className="flex flex-col items-center mx-10">
+      <div className="flex flex-col items-center">
+        <ContactCard />
         <section>
           <GallerySection />
         </section>

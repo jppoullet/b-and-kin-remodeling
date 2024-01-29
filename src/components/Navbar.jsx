@@ -62,21 +62,26 @@ const Navbar = () => {
           {/* Social Contact Us */}
           <div className="md:hidden"></div>
           <div className="hidden md:flex gap-4">
+            {/* Facebook Icon */}
             <button className=" bg-gray-800 p-3 rounded-full">
-              <svg
-                class="w-6 h-6 text-white dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 8 19"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <a href="https://www.facebook.com/profile.php?id=100063549162496">
+                <svg
+                  class="w-6 h-6 text-white dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 8 19"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
             </button>
+
+            {/* Contact Us */}
             <button className="bg-gray-800 text-white py-3 px-6 rounded-full">
               Contact Us
             </button>
@@ -126,15 +131,15 @@ const Navbar = () => {
           </div>
         </div>
         {/* Mobile Menu List */}
-        <div className="overflow-hidden border border-yellow-400 absolute w-full h-full">
+        <div className="md:hidden overflow-hidden absolute w-full">
           <div
-            className={`flex flex-col items-center md:hidden w-full h-full bg-red-700 transition duration-500 ease-in-out ${
+            className={`flex flex-col items-center justify-center md:hidden w-full h-full bg-white transition duration-300 ease-in-out ${
               mobileMenuActive ? "translate-y-0 " : "-translate-y-full"
             }`}
           >
             <NavLink
               to="/services"
-              className="hover:bg-slate-500 block p-4 my-0"
+              className="hover:bg-slate-500 block p-6 my-0 w-full text-center"
               onClick={() => {
                 setState({ isOpen: false });
               }}
@@ -144,7 +149,7 @@ const Navbar = () => {
 
             <NavLink
               to="/testimonials"
-              className="hover:bg-slate-500 block p-4 my-0"
+              className="hover:bg-slate-500 block p-6 my-0"
               onClick={() => {
                 setState({ isOpen: false });
               }}
@@ -154,7 +159,7 @@ const Navbar = () => {
 
             <NavLink
               to="/about"
-              className="hover:bg-slate-500 block p-4 my-0"
+              className="hover:bg-slate-500 block p-6 my-0"
               onClick={() => {
                 setState({ isOpen: false });
               }}
