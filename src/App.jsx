@@ -7,7 +7,9 @@ import Gallery from "./pages/Gallery";
 function App() {
   return (
     <div className="font-lato">
-      <Navbar />
+      <header>
+        <Navbar />
+      </header>
       <Routes>
         <Route index element={<Home />} />
         <Route path="/home" element={<Home />} />

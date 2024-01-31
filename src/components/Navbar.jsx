@@ -63,7 +63,7 @@ const Navbar = () => {
           <div className="md:hidden"></div>
           <div className="hidden md:flex gap-4">
             {/* Facebook Icon */}
-            <button className=" bg-gray-800 p-3 rounded-full">
+            <button className="bg-primary p-3 rounded-full">
               <a href="https://www.facebook.com/profile.php?id=100063549162496">
                 <svg
                   class="w-6 h-6 text-white dark:text-white"
@@ -82,7 +82,7 @@ const Navbar = () => {
             </button>
 
             {/* Contact Us */}
-            <button className="bg-gray-800 text-white py-3 px-6 rounded-full">
+            <button className="bg-primary text-white py-3 px-6 rounded-full">
               Contact Us
             </button>
           </div>
@@ -126,20 +126,49 @@ const Navbar = () => {
           <div className="md:hidden flex justify-end items-center">
             {/* Mobile Menu Button */}
             <button className="" onClick={mobileMenuActiveHandler}>
-              {mobileMenuActive ? closeMenu : openMenu}
+              {openMenu}
             </button>
           </div>
         </div>
         {/* Mobile Menu List */}
-        <div className="md:hidden overflow-hidden absolute w-full">
-          <div
-            className={`flex flex-col items-center justify-center md:hidden w-full h-full bg-white transition duration-300 ease-in-out ${
-              mobileMenuActive ? "translate-y-0 " : "-translate-y-full"
-            }`}
-          >
+        <div
+          className={`flex flex-col justify-center items-center bg-primary md:hidden overflow-x-hidden fixed z-[1] h-full top-0 left-0 transition duration-200 ease-in ${
+            mobileMenuActive
+              ? "translate-x-0 w-full"
+              : "-translate-x-full w-full"
+          }`}
+        >
+          <div className="flex flex-col items-center justify-center md:hidden w-full bg-primary text-secondary my-20">
+            {/* Close Mobile Menu Btn */}
+            <button
+              className="absolute top-[66px] right-10"
+              onClick={mobileMenuActiveHandler}
+            >
+              {closeMenu}
+            </button>
+
+            {/* Facebook Icon */}
+            <button className="bg-secondary p-3 rounded-full absolute top-[66px] left-10">
+              <a href="https://www.facebook.com/profile.php?id=100063549162496">
+                <svg
+                  class="w-6 h-6 text-white dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 8 19"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </button>
+
             <NavLink
               to="/services"
-              className="hover:bg-slate-500 block p-6 my-0 w-full text-center"
+              className="hover:bg-secondary focus:text-primary block p-6 my-0 w-full text-center"
               onClick={() => {
                 setState({ isOpen: false });
               }}
@@ -149,7 +178,7 @@ const Navbar = () => {
 
             <NavLink
               to="/testimonials"
-              className="hover:bg-slate-500 block p-6 my-0"
+              className="hover:bg-secondary focus:text-primary block p-6 my-0 w-full text-center"
               onClick={() => {
                 setState({ isOpen: false });
               }}
@@ -159,7 +188,7 @@ const Navbar = () => {
 
             <NavLink
               to="/about"
-              className="hover:bg-slate-500 block p-6 my-0"
+              className="hover:bg-secondary focus:text-primary block p-6 my-0 w-full text-center"
               onClick={() => {
                 setState({ isOpen: false });
               }}
@@ -167,6 +196,10 @@ const Navbar = () => {
               About
             </NavLink>
           </div>
+
+          <button className="bg-secondary text-white py-3 px-6 rounded-full">
+            Contact Us
+          </button>
         </div>
       </nav>
     </>

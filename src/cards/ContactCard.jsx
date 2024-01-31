@@ -9,7 +9,10 @@ const ContactCard = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} class="w-full p-8 my-4 rounded-2xl shadow-xl">
+    <form
+      onSubmit={handleSubmit}
+      class="w-full p-8 my-4 rounded-2xl shadow-xl max-w-full"
+    >
       <div class="flex">
         <h1 class="font-bold uppercase text-gray-800 text-4xl">
           Send us a message
@@ -50,7 +53,7 @@ const ContactCard = () => {
       </div>
       <div class="my-2 w-1/2 lg:w-1/4 mx-auto">
         <button
-          class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
+          class="uppercase text-sm font-bold tracking-wide bg-primary text-gray-100 p-3 rounded-lg w-full 
               focus:outline-none focus:shadow-outline"
         >
           Send Message

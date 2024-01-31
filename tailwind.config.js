@@ -6,6 +6,11 @@ export default {
       fontFamily: {
         lato: ["Lato", "sans-serif"],
       },
+      colors: {
+        primary: "#183D3D",
+        secondary: "#93B1A6",
+        alternate: "#5C8374",
+      },
     },
   },
   plugins: [],
