@@ -9,11 +9,12 @@ const Navbar = () => {
   };
 
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
+
   const mobileMenuActiveHandler = () => {
     const body = document.querySelector("body");
 
-    console.log("hello");
     setMobileMenuActive(!mobileMenuActive);
+
     if (!mobileMenuActive) {
       body.style.overflow = "hidden";
     } else {
@@ -102,8 +103,8 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          {/* Nav Menu */}
 
+          {/* Nav Menu */}
           <div className={`hidden md:flex text-black justify-end`}>
             <NavLink to="/services" className={activeLink}>
               Services
@@ -130,6 +131,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
         {/* Mobile Menu List */}
         <div
           className={`flex flex-col justify-center items-center bg-primary md:hidden overflow-x-hidden fixed z-[1] h-full top-0 left-0 transition duration-200 ease-in ${
@@ -198,7 +200,7 @@ const Navbar = () => {
           </div>
 
           <button className="bg-secondary text-white py-3 px-6 rounded-full">
-            Contact Us
+            <NavLink to="/contact">Contact Us</NavLink>
           </button>
         </div>
       </nav>
