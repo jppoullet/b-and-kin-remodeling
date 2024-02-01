@@ -6,6 +6,7 @@ import {
   TestimonialsSection,
 } from "../sections";
 import { HomePageImg, AboutMeImg } from "../assets";
+import BenImg from "../assets/DSC07714.jpg";
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
             B & Kin Remodeling - 37 Years of Excellence in Columbus, Ohio
           </h1>
           <br />
-          <img src={AboutMeImg} alt="ben-img" className="w-[450px] mx-auto" />
+          <img src={BenImg} alt="ben-img" className="w-[450px] mx-auto" />
           <br />
           <p className="mx-auto max-w-[1200px]">
             B & Kin Remodeling is your trusted professional for transforming
