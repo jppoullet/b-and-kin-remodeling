@@ -124,11 +124,6 @@ const reviews = [
       "Service was great, quality of work was excellent and the work was efficient and done in a timely manner. I would recommend B & Kin to anyone who looking for quality work at a good price.",
   },
   {
-    Name: "John L.",
-    Location: "Lancaster, OH",
-    Review: "review",
-  },
-  {
     Name: "Valerie B.",
     Location: "Grove City, OH",
     Review:
