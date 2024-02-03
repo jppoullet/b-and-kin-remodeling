@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { Home, About, Contact, Testimonials, Services } from "./pages";
 import Gallery from "./pages/Gallery";
+import FooterCard from "./cards/FooterCard";
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
         </Routes>
       </main>
-      <footer className="bg-red-400">Contact Me</footer>
+      <footer>
+        <FooterCard />
+      </footer>
     </div>
   );
 }

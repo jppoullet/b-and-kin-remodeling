@@ -10,7 +10,9 @@ const TestimonialsSection = () => {
         beyond our expectations. I highly recommend B & Kin Remodeling."
       </p>
       <br />
-      <p className="font-bold text-center">Tom B. - Powell, OH</p>
+      <p className="font-bold text-center text-secondary">
+        Tom B. - Powell, OH
+      </p>
     </div>
   );
 };
