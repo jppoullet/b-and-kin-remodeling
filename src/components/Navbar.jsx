@@ -84,7 +84,7 @@ const Navbar = () => {
 
             {/* Contact Us */}
             <button className="bg-primary text-white py-3 px-6 rounded-full">
-              Contact Us
+              <NavLink to="/contact">Contact Us</NavLink>
             </button>
           </div>
 
@@ -192,7 +192,7 @@ const Navbar = () => {
               to="/about"
               className="hover:bg-secondary focus:text-primary block p-6 my-0 w-full text-center"
               onClick={() => {
-                setState({ isOpen: false });
+                setMobileMenuActive(!mobileMenuActive);
               }}
             >
               About
@@ -200,7 +200,14 @@ const Navbar = () => {
           </div>
 
           <button className="bg-secondary text-white py-3 px-6 rounded-full">
-            <NavLink to="/contact">Contact Us</NavLink>
+            <NavLink
+              to="/contact"
+              onClick={() => {
+                setMobileMenuActive(!mobileMenuActive);
+              }}
+            >
+              Contact Us
+            </NavLink>
           </button>
         </div>
       </nav>

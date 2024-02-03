@@ -2,7 +2,7 @@ import React from "react";
 
 const TestimonialsSection = () => {
   return (
-    <div className="text-white mx-auto px-10 py-16 max-w-[1200px]">
+    <div className="text-white mx-auto px-10 py-16 max-w-[1000px]">
       <p>
         "Benjamin did an excellent job removing our old linoleum floor and
         installing a new ceramic floor for us. Benjamin treated our home as if

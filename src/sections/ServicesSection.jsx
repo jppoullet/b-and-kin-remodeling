@@ -5,7 +5,7 @@ const ServicesSection = () => {
     <div className="text-center w-full">
       <h1 className="text-2xl">Services Offered</h1>
       <br />
-      <div className="flex justify-between">
+      <div className="flex justify-between gap-10">
         <ul>
           <li>Bathrooms</li>
           <li>Kitchens</li>

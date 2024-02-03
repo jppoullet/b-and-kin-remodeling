@@ -15,7 +15,7 @@ const Home = () => {
         <img src={HomePageImg} alt="homepage-img" className="w-full" />
       </div>
 
-      <div className="mx-auto px-10 max-w-[1200px]">
+      <div className="mx-auto px-10 max-w-[1000px]">
         <div className="py-16">
           <h1 className="text-2xl text-center font-bold">
             B & Kin Remodeling - 37 Years of Excellence in Columbus, Ohio
@@ -23,7 +23,7 @@ const Home = () => {
           <br />
           <img src={BenImg} alt="ben-img" className="w-[450px] mx-auto" />
           <br />
-          <p className="mx-auto max-w-[1200px]">
+          <p className="mx-auto">
             B & Kin Remodeling is your trusted professional for transforming
             your living spaces. As a seasoned professional, I have dedicated my
             career to delivering top-notch home remodeling services. From
