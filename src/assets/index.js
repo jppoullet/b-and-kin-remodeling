@@ -1,7 +1,32 @@
-import HomePageImg from "./banner-photo.jpg";
-import AboutMeImg from "./DSC07714.jpg";
+import HomePageImg from "../assets/images/HomePageImg.jpg";
+import AboutMeImg from "../assets/images/DSC07714.jpg";
+import Bar from "../assets/images/bar-img.jpg";
+import Bathroom from "../assets/images/bathroom-img.jpg";
+import Bathroom2 from "../assets/images/bathroom-img2.jpg";
+import Shower from "../assets/images/shower-img.jpg";
 
-const reviews = [
+export { HomePageImg, AboutMeImg };
+
+export const images = [
+  {
+    id: 1,
+    img: Bar,
+  },
+  {
+    id: 2,
+    img: Bathroom,
+  },
+  {
+    id: 3,
+    img: Bathroom2,
+  },
+  {
+    id: 4,
+    img: Shower,
+  },
+];
+
+export const reviews = [
   {
     Name: "Lynn T.",
     Location: "Hilliard, OH",
@@ -180,5 +205,3 @@ const reviews = [
       "These guys rock!! They were very professional and thorough and pointed out small things I had not noticed. Ben and his team worked together very well and there was absolutely no idle time. This is my first experience of having someone in my home working on a project and I was aprehensive about hiring strangers because of all the publicity warning seniors about scams. I felt very comfortable from the time I met Ben. I have other projects to be done and I plan to hire Ben and his team to do them. Their price was very reasonable and the job they did was worth every penny.",
   },
 ];
-
-export { HomePageImg, AboutMeImg, reviews };
