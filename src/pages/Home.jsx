@@ -12,13 +12,17 @@ const Home = () => {
   return (
     <>
       <div>
-        <img src={HomePageImg} alt="homepage-img" className="w-full" />
+        <img
+          src={HomePageImg}
+          alt="homepage-img"
+          className="w-full h-[500px] object-cover"
+        />
       </div>
 
       <div className="mx-auto px-10 max-w-[1000px]">
         <div className="py-16">
           <h1 className="text-2xl text-center font-bold">
-            B & Kin Remodeling - 37 Years of Excellence in Columbus, Ohio
+            B & Kin Remodeling - 25 Years of Excellence in Columbus, Ohio
           </h1>
           <br />
           <img src={AboutMeImg} alt="ben-img" className="w-[450px] mx-auto" />

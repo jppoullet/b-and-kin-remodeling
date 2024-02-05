@@ -1,4 +1,4 @@
-import HomePageImg from "../assets/images/HomePageImg.jpg";
+import HomePageImg from "../assets/images/banner-photo.jpg";
 import AboutMeImg from "../assets/images/DSC07714.jpg";
 import Bar from "../assets/images/bar-img.jpg";
 import Bathroom from "../assets/images/bathroom-img.jpg";

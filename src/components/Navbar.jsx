@@ -6,8 +6,8 @@ import ContactBtn from "./ContactBtn";
 const Navbar = () => {
   const activeLink = ({ isActive }) => {
     return isActive
-      ? "text-gray-800 font-bold block p-2 my-0"
-      : "block p-2 my-0";
+      ? "text-gray-800 font-bold block p-2 my-0 after:block after:h-1 after:w-full after:bg-primary"
+      : "block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-primary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100";
   };
 
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
@@ -61,7 +61,8 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-white">
-        <div className="grid grid-cols-3 flex-1 items-center py-10 mx-10">
+        {/* Desktop View */}
+        <div className="grid grid-cols-3 flex-1 items-center py-10 mx-10 md:max-w-[1200px] xl:mx-auto">
           {/* Social Contact Us */}
           <div className="md:hidden"></div>
           <div className="hidden md:flex gap-4">
@@ -74,7 +75,7 @@ const Navbar = () => {
 
           {/* Home - Business Name/Logo */}
           <div className="flex flex-col items-center">
-            <div className="text-center text-2xl text-gray-800 font-bold no-underline cursor-pointer pb-4">
+            <div className="text-center text-3xl text-gray-800 font-bold no-underline cursor-pointer pb-4">
               <Link
                 to="/"
                 onClick={() => {
@@ -89,21 +90,21 @@ const Navbar = () => {
           </div>
 
           {/* Nav Menu */}
-          <div className={`hidden md:flex text-black justify-end`}>
+          <div className="hidden md:flex text-black text-xl justify-end after:transition-all after:ease-in-out">
             <NavLink to="/services" className={activeLink}>
               Services
             </NavLink>
 
-            {/* <NavLink to="/gallery" className={activeLink}>
-              Galley
-            </NavLink> */}
-
-            <NavLink to="/testimonials" className={activeLink}>
+            {/* <NavLink to="/testimonials" className={activeLink}>
               Testimonials
-            </NavLink>
+            </NavLink> */}
 
             <NavLink to="/about" className={activeLink}>
               About
+            </NavLink>
+
+            <NavLink to="/" className={activeLink}>
+              Home
             </NavLink>
           </div>
 
@@ -155,8 +156,18 @@ const Navbar = () => {
 
           <div className="flex flex-col items-center justify-center md:hidden w-full bg-primary text-secondary my-20">
             <NavLink
+              to="/"
+              className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
+              onClick={() => {
+                setState({ isOpen: false });
+              }}
+            >
+              Home
+            </NavLink>
+
+            <NavLink
               to="/services"
-              className="hover:bg-secondary focus:text-primary block p-6 my-0 w-full text-center"
+              className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
               onClick={() => {
                 setState({ isOpen: false });
               }}
@@ -166,7 +177,7 @@ const Navbar = () => {
 
             <NavLink
               to="/testimonials"
-              className="hover:bg-secondary focus:text-primary block p-6 my-0 w-full text-center"
+              className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
               onClick={() => {
                 setState({ isOpen: false });
               }}
@@ -176,7 +187,7 @@ const Navbar = () => {
 
             <NavLink
               to="/about"
-              className="hover:bg-secondary focus:text-primary block p-6 my-0 w-full text-center"
+              className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
               onClick={() => {
                 setState({ isOpen: false });
               }}

@@ -54,7 +54,7 @@ const ContactCard = () => {
       <div className="my-2 w-1/2 lg:w-1/4 mx-auto">
         <button
           className="uppercase text-sm font-bold tracking-wide bg-primary text-white p-3 rounded-lg w-full 
-              focus:outline-none focus:shadow-outline hover:bg-secondary"
+              focus:outline-none focus:shadow-outline hover:bg-secondary transition duration-500"
         >
           Send Message
         </button>
