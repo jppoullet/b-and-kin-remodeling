@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import FacebookBtn from "./FacebookBtn";
-import ContactBtn from "./ContactBtn";
+import Btn from "./Btn";
 
 const Navbar = () => {
   const activeLink = ({ isActive }) => {
     return isActive
-      ? "text-gray-800 font-bold block p-2 my-0 after:block after:h-1 after:w-full after:bg-primary"
-      : "block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-primary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100";
+      ? "text-white font-bold block p-2 my-0 after:block after:h-1 after:w-full after:bg-secondary"
+      : "block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100";
   };
 
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
@@ -60,7 +60,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white">
+      <nav className="bg-primary">
         {/* Desktop View */}
         <div className="grid grid-cols-3 flex-1 items-center py-10 mx-10 md:max-w-[1200px] xl:mx-auto">
           {/* Social Contact Us */}
@@ -70,12 +70,14 @@ const Navbar = () => {
             <FacebookBtn />
 
             {/* Contact Us */}
-            <ContactBtn />
+            <NavLink to="/contact">
+              <Btn text={"Contact Us"} />
+            </NavLink>
           </div>
 
           {/* Home - Business Name/Logo */}
           <div className="flex flex-col items-center">
-            <div className="text-center text-3xl text-gray-800 font-bold no-underline cursor-pointer pb-4">
+            <div className="text-center text-3xl text-white font-bold no-underline cursor-pointer pb-4">
               <Link
                 to="/"
                 onClick={() => {
@@ -90,7 +92,7 @@ const Navbar = () => {
           </div>
 
           {/* Nav Menu */}
-          <div className="hidden md:flex text-black text-xl justify-end after:transition-all after:ease-in-out">
+          <div className="hidden md:flex text-secondary text-xl justify-end after:transition-all after:ease-in-out">
             <NavLink to="/services" className={activeLink}>
               Services
             </NavLink>
@@ -111,7 +113,10 @@ const Navbar = () => {
           {/* Mobile Menu Button*/}
           <div className="md:hidden flex justify-end items-center">
             {/* Mobile Menu Button */}
-            <button className="" onClick={mobileMenuActiveHandler}>
+            <button
+              className="text-secondary"
+              onClick={mobileMenuActiveHandler}
+            >
               {openMenu}
             </button>
           </div>
@@ -196,16 +201,15 @@ const Navbar = () => {
             </NavLink>
           </div>
 
-          <button className="bg-secondary text-white py-3 px-6 bottom-20 absolute rounded-full">
-            <NavLink
-              to="/contact"
-              onClick={() => {
-                setState({ isOpen: false });
-              }}
-            >
-              Contact Us
-            </NavLink>
-          </button>
+          <NavLink
+            to="/contact"
+            className="absolute bottom-32"
+            onClick={() => {
+              setState({ isOpen: false });
+            }}
+          >
+            <Btn text={"Contact Us"} />
+          </NavLink>
         </div>
       </nav>
     </>

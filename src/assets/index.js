@@ -4,25 +4,125 @@ import Bar from "../assets/images/bar-img.jpg";
 import Bathroom from "../assets/images/bathroom-img.jpg";
 import Bathroom2 from "../assets/images/bathroom-img2.jpg";
 import Shower from "../assets/images/shower-img.jpg";
+import BathroomPosing from "../assets/images/bathroom-posing.jpg";
+import BathroomTile from "../assets/images/bathroom-tile.jpg";
+import FlooringAfter1 from "../assets/images/flooring-after1.jpg";
+import FlooringAfter2 from "../assets/images/flooring-after2.jpg";
+import FlooringBefore from "../assets/images/flooring-before.jpg";
+import KitchenCounter from "../assets/images/kitchen-counter.jpg";
+import KitchenCounter2 from "../assets/images/kitchen-counter2.jpg";
+import KitchenSmallTileWork from "../assets/images/kitchen-small-tilework.jpg";
+import ShowerAfter1 from "../assets/images/shower-after1.jpg";
+import ShowerBefore1 from "../assets/images/shower-before1.jpg";
+import ShowerImg from "../assets/images/shower-img.jpg";
+import ShowerImg2 from "../assets/images/shower-img2.jpg";
+import ShowerImgVanity from "../assets/images/shower-img3-vanity.jpg";
+import ShowerVanity from "../assets/images/shower-vanity.jpg";
+import SmallKitchenAfter from "../assets/images/small-kitchen-after.jpg";
+import SmallKitchenBefore from "../assets/images/small-kitchen-before.jpg";
 
 export { HomePageImg, AboutMeImg };
 
 export const images = [
   {
     id: 1,
+    room: "kitchen",
     img: Bar,
   },
   {
     id: 2,
+    room: "bath",
     img: Bathroom,
   },
   {
     id: 3,
+    room: "bath",
     img: Bathroom2,
   },
   {
     id: 4,
+    room: "bath",
     img: Shower,
+  },
+  {
+    id: 5,
+    room: "bath",
+    img: BathroomPosing,
+  },
+  {
+    id: 6,
+    room: "bath",
+    img: BathroomTile,
+  },
+  {
+    id: 7,
+    room: "flooring",
+    img: FlooringBefore,
+  },
+  {
+    id: 8,
+    room: "flooring",
+    img: FlooringAfter1,
+  },
+  {
+    id: 9,
+    room: "flooring",
+    img: FlooringAfter2,
+  },
+  {
+    id: 10,
+    room: "kitchen",
+    img: KitchenCounter,
+  },
+  {
+    id: 11,
+    room: "kitchen",
+    img: KitchenCounter2,
+  },
+  {
+    id: 12,
+    room: "kitchen",
+    img: KitchenSmallTileWork,
+  },
+  {
+    id: 13,
+    room: "bath",
+    img: ShowerBefore1,
+  },
+  {
+    id: 14,
+    room: "bath",
+    img: ShowerAfter1,
+  },
+  {
+    id: 15,
+    room: "bath",
+    img: ShowerImg,
+  },
+  {
+    id: 16,
+    room: "bath",
+    img: ShowerImg2,
+  },
+  {
+    id: 17,
+    room: "bath",
+    img: ShowerImgVanity,
+  },
+  {
+    id: 18,
+    room: "bath",
+    img: ShowerVanity,
+  },
+  {
+    id: 19,
+    room: "kitchen",
+    img: SmallKitchenBefore,
+  },
+  {
+    id: 20,
+    room: "kitchen",
+    img: SmallKitchenAfter,
   },
 ];
 

@@ -3,7 +3,7 @@ import ContactCard from "../cards/ContactCard";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center gap-10 mx-auto px-10 max-w-[900px] text-center">
+    <div className="flex flex-col items-center gap-10 mx-auto px-10 max-w-[900px] text-center my-10">
       <div>
         <h1 className="text-xl font-bold">
           Make your remodeling dreams come true.
