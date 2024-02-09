@@ -44,7 +44,7 @@ const Home = () => {
             <GallerySection />
           </section>
           <hr className="size-1 bg-primary w-4/5" />
-          <section className="py-16">
+          <section id="services-section" className="py-16">
             <ServicesSection />
           </section>
           <hr className="size-1 bg-primary w-4/5" />

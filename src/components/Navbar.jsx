@@ -60,7 +60,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-primary">
+      <nav className="bg-primary fixed top-0 w-full">
         {/* Desktop View */}
         <div className="grid grid-cols-3 flex-1 items-center py-10 mx-10 md:max-w-[1200px] xl:mx-auto">
           {/* Social Contact Us */}
@@ -92,14 +92,13 @@ const Navbar = () => {
           </div>
 
           {/* Nav Menu */}
-          <div className="hidden md:flex text-secondary text-xl justify-end after:transition-all after:ease-in-out">
-            <NavLink to="/services" className={activeLink}>
+          <div className="hidden md:flex text-secondary text-xl justify-end">
+            <a
+              href="#services-section"
+              className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
+            >
               Services
-            </NavLink>
-
-            {/* <NavLink to="/testimonials" className={activeLink}>
-              Testimonials
-            </NavLink> */}
+            </a>
 
             <NavLink to="/about" className={activeLink}>
               About
