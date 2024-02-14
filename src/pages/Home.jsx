@@ -10,7 +10,7 @@ import { HomePageImg, AboutMeImg } from "../assets/index";
 
 const Home = () => {
   return (
-    <>
+    <div id="home" className="">
       <div>
         <img
           src={HomePageImg}
@@ -53,7 +53,7 @@ const Home = () => {
           </section>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

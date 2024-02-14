@@ -11,7 +11,7 @@ function App() {
       <header>
         <Navbar />
       </header>
-      <main className="mt-[40px]">
+      <main className="mt-[168px]">
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
