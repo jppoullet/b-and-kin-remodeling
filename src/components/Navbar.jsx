@@ -31,7 +31,7 @@ const Navbar = () => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="w-6 h-6"
+      className="w-8 h-8"
     >
       <path
         strokeLinecap="round"
@@ -59,9 +59,9 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-primary fixed top-0 w-full">
+    <nav className="bg-primary w-full fixed top-0">
       {/* Desktop View */}
-      <div className="grid grid-cols-3 flex-1 items-center py-10 mx-10 md:max-w-[1200px] xl:mx-auto">
+      <div className="grid grid-cols-3 items-center mx-10 py-1 md:max-w-[1200px] xl:mx-auto">
         {/* Social Contact Us */}
         <div className="md:hidden"></div>
         <div className="hidden md:flex gap-4">

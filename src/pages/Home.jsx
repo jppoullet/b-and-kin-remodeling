@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ContactCard from "../cards/ContactCard";
 import {
   GallerySection,
@@ -6,7 +6,7 @@ import {
   TestimonialsSection,
 } from "../sections";
 import { HomePageImg, AboutMeImg } from "../assets/index";
-// import BenImg from "../assets/DSC07714.jpg";
+import Modal from "../components/Modal";
 
 const Home = () => {
   return (

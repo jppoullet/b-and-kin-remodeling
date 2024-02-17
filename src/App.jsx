@@ -8,10 +8,9 @@ import FooterCard from "./cards/FooterCard";
 function App() {
   return (
     <div className="font-lato">
-      <header>
-        <Navbar />
-      </header>
-      <main className="mt-[168px]">
+      <Navbar />
+
+      <main className="mt-[95px]">
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
