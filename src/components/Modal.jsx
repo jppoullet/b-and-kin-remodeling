@@ -49,7 +49,7 @@ const Modal = () => {
       </button>
       <dialog
         ref={dialogRef}
-        className="bg-black min-w-full min-h-full text-white text-6xl backdrop-opacity-15"
+        className="min-w-full min-h-full text-white text-6xl bg-black bg-opacity-90"
       >
         <div className="flex flex-col justify-center items-center">
           <div className="h-[600px] w-full flex flex-col justify-center relative">
@@ -76,7 +76,7 @@ const Modal = () => {
             />
             <div
               id="slider"
-              className="w-1/2 h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth no-scrollbar"
+              className="w-1/2 h-full overflow-x-scroll whitespace-nowrap scroll-smooth no-scrollbar"
             >
               {images.map((image) => (
                 <img
@@ -84,9 +84,6 @@ const Modal = () => {
                   src={image.img}
                   alt="/"
                   key={image.id}
-                  onClick={() => {
-                    setCurrentImg(image.img);
-                  }}
                 ></img>
               ))}
             </div>
@@ -96,6 +93,33 @@ const Modal = () => {
               onClick={slideRight}
             />
           </div> */}
+
+          <div className="flex items-center">
+            <MdChevronLeft
+              className="opacity-50 cursor-pointer hover:opacity-100"
+              size={40}
+              onClick={slideLeft}
+            />
+            <div
+              id="slider"
+              className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth no-scrollbar"
+            >
+              {images.map((image) => (
+                <img
+                  className="w-[100px] inline-block p-2 cursor-point hover:scale-105 ease-in-out duration-200"
+                  src={image.img}
+                  alt="/"
+                  key={image.id}
+                ></img>
+              ))}
+            </div>
+            <MdChevronRight
+              className="opacity-50 cursor-pointer hover:opacity-100"
+              size={40}
+              onClick={slideRight}
+            />
+          </div>
+
           <button
             onClick={toggleDialog}
             className="p-2 bg-secondary opacity-80 hover:opacity-100 text-black rounded-lg text-xl absolute top-7 right-7"

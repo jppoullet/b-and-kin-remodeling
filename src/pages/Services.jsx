@@ -54,9 +54,6 @@ const Services = () => {
               src={image.img}
               alt="/"
               key={image.id}
-              onClick={() => {
-                setCurrentImg(image.img);
-              }}
             ></img>
           ))}
         </div>
