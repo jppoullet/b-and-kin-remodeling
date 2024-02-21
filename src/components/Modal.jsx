@@ -49,7 +49,7 @@ const Modal = () => {
         className="rounded-full bg-primary text-white py-2 px-5 my-2"
         onClick={toggleDialog}
       >
-        View More of Our Work
+        View Our Work
       </button>
       <dialog
         ref={dialogRef}

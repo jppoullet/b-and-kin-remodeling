@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import ContactCard from "../cards/ContactCard";
 import {
   GallerySection,
@@ -37,10 +37,10 @@ const Home = () => {
           </p>
         </div>
         <div className="flex flex-col items-center">
-          <section className="bg-primary w-screen">
+          <section id="testimonials-section" className="bg-primary w-screen">
             <TestimonialsSection />
           </section>
-          <section className="py-16">
+          <section id="gallery-section" className="py-16">
             <GallerySection />
           </section>
           <hr className="size-1 bg-primary w-4/5" />
@@ -48,7 +48,7 @@ const Home = () => {
             <ServicesSection />
           </section>
           <hr className="size-1 bg-primary w-4/5" />
-          <section className="w-full pt-16">
+          <section id="contact-section" className="w-full pt-16">
             <ContactCard />
           </section>
         </div>

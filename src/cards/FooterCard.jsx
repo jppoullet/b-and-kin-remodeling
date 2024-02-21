@@ -15,7 +15,7 @@ const FooterCard = () => {
       <p>
         Email:{" "}
         <a href="mailto:" className="hover:font-bold">
-          name@address.com
+          bnkin.remodeling@yahoo.com
         </a>
       </p>
     </div>

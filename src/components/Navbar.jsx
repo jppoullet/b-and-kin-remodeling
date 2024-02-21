@@ -70,7 +70,7 @@ const Navbar = () => {
 
           {/* Contact Us */}
           <NavLink to="/contact">
-            <Btn text={"Contact Us"} />
+            <Btn>Contact Us</Btn>
           </NavLink>
         </div>
 
@@ -172,24 +172,25 @@ const Navbar = () => {
           </NavLink>
 
           <a
-            href="#services-section"
             className="hover:bg-secondary hover:text-primary block p-6 my-0
             w-full text-center"
-            onClick={mobileMenuActiveHandler}
+            onClick={() => {
+              document.getElementById("gallery-section").scrollIntoView();
+              mobileMenuActiveHandler();
+            }}
           >
-            {" "}
             Services
           </a>
 
-          <NavLink
-            to="/testimonials"
+          <a
             className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
             onClick={() => {
-              setState({ isOpen: false });
+              document.getElementById("testimonials-section").scrollIntoView();
+              mobileMenuActiveHandler();
             }}
           >
             Testimonials
-          </NavLink>
+          </a>
 
           <NavLink
             to="/about"
@@ -202,15 +203,15 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        <NavLink
-          to="/contact"
+        <a
           className="absolute bottom-32"
           onClick={() => {
-            setState({ isOpen: false });
+            document.getElementById("contact-section").scrollIntoView();
+            mobileMenuActiveHandler();
           }}
         >
-          <Btn text={"Contact Us"} />
-        </NavLink>
+          <Btn>Contact Us</Btn>
+        </a>
       </div>
     </nav>
   );
