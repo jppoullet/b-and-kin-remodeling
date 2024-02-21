@@ -18,25 +18,29 @@ const Modal = () => {
   };
 
   const slideLeft = () => {
-    let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 400;
+    let slider = document.getElementById("sliderr");
+    slider.scrollLeft = slider.scrollLeft - 100;
   };
 
   const slideRight = () => {
-    let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 400;
+    let slider = document.getElementById("sliderr");
+    slider.scrollLeft = slider.scrollLeft + 100;
   };
 
   const prevImg = () => {
     setCurrentImg((currentImg) =>
       currentImg === 0 ? images.length - 1 : currentImg - 1
     );
+    let slider = document.getElementById("sliderr");
+    slider.scrollLeft = slider.scrollLeft - 100;
   };
 
   const nextImg = () => {
     setCurrentImg((currentImg) =>
       currentImg === images.length - 1 ? 0 : currentImg + 1
     );
+    let slider = document.getElementById("sliderr");
+    slider.scrollLeft = slider.scrollLeft + 100;
   };
 
   return (
@@ -68,32 +72,6 @@ const Modal = () => {
             </div>
           </div>
 
-          {/* <div className="flex items-center justify-center">
-            <MdChevronLeft
-              className="opacity-50 cursor-pointer hover:opacity-100"
-              size={40}
-              onClick={slideLeft}
-            />
-            <div
-              id="slider"
-              className="w-1/2 h-full overflow-x-scroll whitespace-nowrap scroll-smooth no-scrollbar"
-            >
-              {images.map((image) => (
-                <img
-                  className="w-[100px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-200"
-                  src={image.img}
-                  alt="/"
-                  key={image.id}
-                ></img>
-              ))}
-            </div>
-            <MdChevronRight
-              className="opacity-50 cursor-pointer hover:opacity-100"
-              size={40}
-              onClick={slideRight}
-            />
-          </div> */}
-
           <div className="flex items-center">
             <MdChevronLeft
               className="opacity-50 cursor-pointer hover:opacity-100"
@@ -101,7 +79,7 @@ const Modal = () => {
               onClick={slideLeft}
             />
             <div
-              id="slider"
+              id="sliderr"
               className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth no-scrollbar"
             >
               {images.map((image) => (

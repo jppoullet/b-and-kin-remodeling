@@ -48,7 +48,7 @@ const Navbar = () => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="w-6 h-6"
+      className="w-8 h-8"
     >
       <path
         strokeLinecap="round"
@@ -129,8 +129,8 @@ const Navbar = () => {
 
       {/* Mobile Menu List */}
       <div
-        className={`flex flex-col justify-center items-center bg-primary md:hidden overflow-x-hidden fixed z-[1] h-full top-0 left-0 transition duration-200 ease-in ${
-          mobileMenuActive ? "translate-x-0 w-full" : "-translate-x-full w-full"
+        className={`flex flex-col justify-center items-center bg-primary md:hidden overflow-x-hidden fixed z-[1] h-full top-0 right-0 transition duration-200 ease-in ${
+          mobileMenuActive ? "-translate-x-0 w-1/2" : "translate-x-full w-1/2"
         }`}
       >
         <div className="p-10 w-full flex justify-between top-4 absolute">
@@ -159,6 +159,7 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Mobile Menu Links */}
         <div className="flex flex-col items-center justify-center md:hidden w-full bg-primary text-secondary my-20">
           <NavLink
             to="/"
@@ -170,15 +171,15 @@ const Navbar = () => {
             Home
           </NavLink>
 
-          <NavLink
-            to="/services"
-            className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
-            onClick={() => {
-              setState({ isOpen: false });
-            }}
+          <a
+            href="#services-section"
+            className="hover:bg-secondary hover:text-primary block p-6 my-0
+            w-full text-center"
+            onClick={mobileMenuActiveHandler}
           >
+            {" "}
             Services
-          </NavLink>
+          </a>
 
           <NavLink
             to="/testimonials"
