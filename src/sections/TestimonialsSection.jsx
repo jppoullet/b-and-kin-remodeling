@@ -18,7 +18,6 @@ const TestimonialsSection = () => {
       <p className="font-bold text-center text-secondary">
         Tom B. - Powell, OH
       </p>
-      <a href="/Testimonials">Test</a>
       <div className="text-center mt-10">
         <a href="/Testimonials">
           <Btn>View Testimonials</Btn>

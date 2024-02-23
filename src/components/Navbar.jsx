@@ -69,9 +69,15 @@ const Navbar = () => {
           <FacebookBtn />
 
           {/* Contact Us */}
-          <NavLink to="/contact">
+
+          <a
+            onClick={() => {
+              document.getElementById("contact-section").scrollIntoView();
+              mobileMenuActiveHandler();
+            }}
+          >
             <Btn>Contact Us</Btn>
-          </NavLink>
+          </a>
         </div>
 
         {/* Home - Business Name/Logo */}
@@ -98,7 +104,14 @@ const Navbar = () => {
           >
             Services
           </a> */}
-          <NavLink to="/services" className={activeLink}>
+          <NavLink
+            to="/services"
+            onClick={() => {
+              document.getElementById("gallery-section").scrollIntoView();
+              mobileMenuActiveHandler();
+            }}
+            className={activeLink}
+          >
             Services
           </NavLink>
 

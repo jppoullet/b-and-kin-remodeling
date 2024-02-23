@@ -1,11 +1,23 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactCard = () => {
   const [firstName, setFirstName] = useState("");
+  const notify = () => toast("Thank You");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`First Name: ${firstName}`);
+    toast("Thank You", {
+      position: "top-center",
+      autoClose: 2500,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
 
   return (
@@ -80,6 +92,19 @@ const ContactCard = () => {
           </button>
         </div>
       </form>
+      <ToastContainer
+        position="top-center"
+        autoClose={2500}
+        limit={1}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="colored"
+      />
     </div>
   );
 };
