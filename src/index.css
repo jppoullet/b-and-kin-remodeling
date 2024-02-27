@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
+:root {
+  --toastify-color-success: #5c8374;
+}
+
 *,
 *::before,
 *::after {

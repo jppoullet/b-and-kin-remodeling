@@ -8,7 +8,7 @@ const ContactCard = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast("Thank You", {
+    toast.success("Thank You", {
       position: "top-center",
       autoClose: 2500,
       hideProgressBar: true,
@@ -92,19 +92,7 @@ const ContactCard = () => {
           </button>
         </div>
       </form>
-      <ToastContainer
-        position="top-center"
-        autoClose={2500}
-        limit={1}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover={false}
-        theme="colored"
-      />
+      <ToastContainer />
     </div>
   );
 };
