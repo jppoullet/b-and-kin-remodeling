@@ -7,13 +7,11 @@ const FooterCard = () => {
       <br />
       <p>Benjamin - Owner</p>
       <p>
-        Phone:{" "}
         <a href="tel:6143906882" className="hover:font-bold">
           614-390-6882
         </a>
       </p>
       <p>
-        Email:{" "}
         <a href="mailto:" className="hover:font-bold">
           bnkin.remodeling@yahoo.com
         </a>

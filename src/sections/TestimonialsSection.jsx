@@ -1,5 +1,6 @@
 import React from "react";
 import Btn from "../components/Btn";
+import TestimonialsModal from "../components/TestimonialsModal";
 
 const TestimonialsSection = () => {
   return (
@@ -19,9 +20,7 @@ const TestimonialsSection = () => {
         Tom B. - Powell, OH
       </p>
       <div className="text-center mt-10">
-        <a href="/Testimonials">
-          <Btn>View Testimonials</Btn>
-        </a>
+        <TestimonialsModal />
       </div>
     </div>
   );

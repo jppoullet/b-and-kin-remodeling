@@ -19,29 +19,19 @@ const GallerySection = () => {
   return (
     <div className="flex flex-col items-center gap-2">
       <div className="flex items-center">
-        {/* <MdChevronLeft
-          className="opacity-50 cursor-pointer hover:opacity-100"
-          size={40}
-          onClick={slideLeft}
-        /> */}
         <div
           id="slider"
           className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth no-scrollbar"
         >
           {homePageImages.map((image) => (
             <img
-              className="w-[220px] inline-block p-2 cursor-point hover:scale-105 ease-in-out duration-200"
+              className="w-[220px] inline-block p-2 cursor-point ease-in-out duration-200"
               src={image.img}
               alt="/"
               key={image.id}
             ></img>
           ))}
         </div>
-        {/* <MdChevronRight
-          className="opacity-50 cursor-pointer hover:opacity-100"
-          size={40}
-          onClick={slideRight}
-        /> */}
       </div>
       <Modal />
     </div>

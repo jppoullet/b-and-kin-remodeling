@@ -20,7 +20,7 @@ const Home = () => {
       </div>
 
       <div className="mx-auto px-10 max-w-[1000px]">
-        <div className="py-16">
+        <div id="about-section" className="py-16">
           <h1 className="text-2xl text-center font-bold">
             B & Kin Remodeling - 25 Years of Excellence in Columbus, Ohio
           </h1>

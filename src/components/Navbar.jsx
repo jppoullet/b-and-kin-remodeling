@@ -73,7 +73,6 @@ const Navbar = () => {
           <a
             onClick={() => {
               document.getElementById("contact-section").scrollIntoView();
-              mobileMenuActiveHandler();
             }}
           >
             <Btn>Contact Us</Btn>
@@ -104,20 +103,23 @@ const Navbar = () => {
           >
             Services
           </a> */}
-          <NavLink
-            to="/services"
+          <a
             onClick={() => {
               document.getElementById("gallery-section").scrollIntoView();
-              mobileMenuActiveHandler();
             }}
-            className={activeLink}
+            className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
           >
             Services
-          </NavLink>
+          </a>
 
-          <NavLink to="/about" className={activeLink}>
+          <a
+            onClick={() => {
+              document.getElementById("about-section").scrollIntoView();
+            }}
+            className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
+          >
             About
-          </NavLink>
+          </a>
 
           {/* <a
             href="#home"
@@ -205,22 +207,22 @@ const Navbar = () => {
             Testimonials
           </a>
 
-          <NavLink
+          <a
             to="/about"
             className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
             onClick={() => {
-              setState({ isOpen: false });
+              document.getElementById("about-section").scrollIntoView();
+              mobileMenuActiveHandler();
             }}
           >
             About
-          </NavLink>
+          </a>
         </div>
 
         <a
           className="absolute bottom-32"
           onClick={() => {
             document.getElementById("contact-section").scrollIntoView();
-            mobileMenuActiveHandler();
           }}
         >
           <Btn>Contact Us</Btn>

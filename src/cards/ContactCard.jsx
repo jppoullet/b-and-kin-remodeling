@@ -3,8 +3,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ContactCard = () => {
-  const [firstName, setFirstName] = useState("");
   const notify = () => toast("Thank You");
+
+  window.onload = function () {
+    // Reset the form fields when the page loads
+    document.getElementById("form").reset();
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,9 +46,22 @@ const ContactCard = () => {
       </div>
 
       <form
-        onSubmit={handleSubmit}
+        id="form"
         className="w-full p-8 my-4 rounded-2xl shadow-xl max-w-full"
+        action="https://api.web3forms.com/submit"
+        method="POST"
       >
+        <input
+          type="hidden"
+          name="access_key"
+          value="96c8992f-ca51-48c7-9f69-73c8fb2912e6"
+        />
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://web3forms.com/success"
+        ></input>
+
         <div className="flex">
           <h1 className="font-bold uppercase text-2xl mx-auto">
             Send us a message
@@ -56,35 +73,42 @@ const ContactCard = () => {
             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="First Name*"
-            value={firstName}
-            onChange={(e) => {
-              setFirstName(e.target.value);
-            }}
+            name="first name"
+            required
           />
           <input
             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Last Name*"
+            name="last name"
+            required
           />
           <input
             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             type="email"
             placeholder="Email*"
+            name="email"
+            required
           />
           <input
             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="Phone*"
+            name="phone"
+            required
           />
         </div>
         <div className="my-4">
           <textarea
             placeholder="Message*"
+            name="message"
             className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+            required
           ></textarea>
         </div>
         <div className="my-2 w-1/2 lg:w-1/4 mx-auto">
           <button
+            type="submit"
             className="uppercase text-sm font-bold tracking-wide bg-primary text-white p-3 rounded-lg w-full 
               focus:outline-none focus:shadow-outline hover:bg-secondary transition duration-500"
           >
