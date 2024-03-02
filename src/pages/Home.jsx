@@ -5,8 +5,8 @@ import {
   ServicesSection,
   TestimonialsSection,
 } from "../sections";
-import { HomePageImg, AboutMeImg } from "../assets/index";
-import Modal from "../components/Modal";
+import { HomePageImg } from "../assets/index";
+import AboutSection from "../sections/AboutSection";
 
 const Home = () => {
   return (
@@ -20,22 +20,9 @@ const Home = () => {
       </div>
 
       <div className="mx-auto px-10 max-w-[1000px]">
-        <div id="about-section" className="py-16">
-          <h1 className="text-2xl text-center font-bold">
-            B & Kin Remodeling - 25 Years of Excellence in Columbus, Ohio
-          </h1>
-          <br />
-          <img src={AboutMeImg} alt="ben-img" className="w-[450px] mx-auto" />
-          <br />
-          <p className="mx-auto">
-            B & Kin Remodeling is your trusted professional for transforming
-            your living spaces. As a seasoned professional, I have dedicated my
-            career to delivering top-notch home remodeling services. From
-            concept to completion, my expertise ensures quality craftsmanship
-            and attention to detail. Let's bring your home improvement dreams to
-            life!
-          </p>
-        </div>
+        <section id="about-section">
+          <AboutSection />
+        </section>
         <div className="flex flex-col items-center">
           <section id="testimonials-section" className="bg-primary w-screen">
             <TestimonialsSection />

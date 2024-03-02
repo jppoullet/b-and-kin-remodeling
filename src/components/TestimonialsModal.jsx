@@ -18,7 +18,7 @@ const TestimonialsModal = () => {
     <>
       <button
         onClick={toggleDialog}
-        className="md:bg-secondary bg-secondary text-white py-3 px-6 rounded-full hover:bg-alternate transition duration-300"
+        className="md:bg-secondary bg-secondary text-white py-3 px-6 rounded-full shadow-md hover:bg-alternate transition duration-300"
       >
         View Testimonials
       </button>

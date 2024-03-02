@@ -3,18 +3,34 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ContactCard = () => {
-  const notify = () => toast("Thank You");
+  const [result, setResult] = useState("");
 
-  window.onload = function () {
-    // Reset the form fields when the page loads
-    document.getElementById("form").reset();
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast.success("Thank You", {
+    console.log(e);
+    // setResult("Sending....");
+    const formData = new FormData(e.target);
+
+    formData.append("access_key", "96c8992f-ca51-48c7-9f69-73c8fb2912e6");
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+      // setResult(res.message);
+    } else {
+      console.log("Error", res);
+      // setResult(res.message);
+    }
+
+    document.getElementById("form").reset();
+
+    toast.success(`${res.message} We will contact you shortly`, {
       position: "top-center",
-      autoClose: 2500,
+      autoClose: 3500,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: false,
@@ -47,20 +63,14 @@ const ContactCard = () => {
 
       <form
         id="form"
+        onSubmit={handleSubmit}
         className="w-full p-8 my-4 rounded-2xl shadow-xl max-w-full"
-        action="https://api.web3forms.com/submit"
-        method="POST"
       >
-        <input
-          type="hidden"
-          name="access_key"
-          value="96c8992f-ca51-48c7-9f69-73c8fb2912e6"
-        />
-        <input
+        {/* <input
           type="hidden"
           name="redirect"
           value="https://web3forms.com/success"
-        ></input>
+        ></input> */}
 
         <div className="flex">
           <h1 className="font-bold uppercase text-2xl mx-auto">

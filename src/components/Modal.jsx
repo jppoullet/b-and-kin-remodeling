@@ -28,16 +28,14 @@ const Modal = () => {
   };
 
   const prevImg = () => {
-    setCurrentImg((currentImg) =>
-      currentImg === 0 ? images.length - 1 : currentImg - 1
-    );
+    setCurrentImg((currentImg) => (currentImg === 0 ? 0 : currentImg - 1));
     let slider = document.getElementById("sliderr");
     slider.scrollLeft = slider.scrollLeft - 100;
   };
 
   const nextImg = () => {
     setCurrentImg((currentImg) =>
-      currentImg === images.length - 1 ? 0 : currentImg + 1
+      currentImg === images.length - 1 ? images.length - 1 : currentImg + 1
     );
     let slider = document.getElementById("sliderr");
     slider.scrollLeft = slider.scrollLeft + 100;
@@ -46,7 +44,7 @@ const Modal = () => {
   return (
     <>
       <button
-        className="rounded-full bg-primary text-white py-2 px-5 my-2"
+        className="rounded-full bg-primary text-white py-2 px-5 my-2 shadow-md"
         onClick={toggleDialog}
       >
         View Our Work

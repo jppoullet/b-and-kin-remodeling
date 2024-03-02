@@ -128,9 +128,14 @@ const Navbar = () => {
             Home
           </a> */}
 
-          <NavLink to="/" className={activeLink}>
+          <a
+            onClick={() => {
+              document.getElementById("home").scrollIntoView();
+            }}
+            className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
+          >
             Home
-          </NavLink>
+          </a>
         </div>
 
         {/* Mobile Menu Button*/}
@@ -176,15 +181,15 @@ const Navbar = () => {
 
         {/* Mobile Menu Links */}
         <div className="flex flex-col items-center justify-center md:hidden w-full bg-primary text-secondary my-20">
-          <NavLink
-            to="/"
-            className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
+          <a
             onClick={() => {
-              setState({ isOpen: false });
+              document.getElementById("home").scrollIntoView();
+              mobileMenuActiveHandler();
             }}
+            className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
           >
             Home
-          </NavLink>
+          </a>
 
           <a
             className="hover:bg-secondary hover:text-primary block p-6 my-0
@@ -223,6 +228,7 @@ const Navbar = () => {
           className="absolute bottom-32"
           onClick={() => {
             document.getElementById("contact-section").scrollIntoView();
+            mobileMenuActiveHandler();
           }}
         >
           <Btn>Contact Us</Btn>
