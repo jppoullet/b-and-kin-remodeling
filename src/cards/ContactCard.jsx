@@ -7,10 +7,10 @@ const ContactCard = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(e);
-    // setResult("Sending....");
-    const formData = new FormData(e.target);
 
+    const phoneRegex = /(\d{3})(\d{3})(\d{4})/;
+
+    const formData = new FormData(e.target);
     formData.append("access_key", "96c8992f-ca51-48c7-9f69-73c8fb2912e6");
 
     const res = await fetch("https://api.web3forms.com/submit", {
@@ -38,6 +38,11 @@ const ContactCard = () => {
       progress: undefined,
       theme: "colored",
     });
+  };
+
+  const formatPhone = () => {
+    const phoneRegex = /(\d{3})(\d{3})(\d{4})/;
+    return phoneNumber.replace(phoneRegex, "($1) $2-$3");
   };
 
   return (
@@ -102,9 +107,11 @@ const ContactCard = () => {
           />
           <input
             className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-            type="text"
+            type="tel"
             placeholder="Phone*"
             name="phone"
+            onChange={phoneRegex}
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
             required
           />
         </div>
