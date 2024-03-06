@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const ContactCard = () => {
   const [result, setResult] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,9 +41,12 @@ const ContactCard = () => {
     });
   };
 
-  const formatPhone = () => {
-    const phoneRegex = /(\d{3})(\d{3})(\d{4})/;
-    return phoneNumber.replace(phoneRegex, "($1) $2-$3");
+  const formatPhone = (e) => {
+    const value = e.target.value;
+    const formattedPhoneNumber = getFormattedPhoneNumber(value);
+    setPhoneNumber(formattedPhoneNumber);
+    // const phoneRegex = /(\d{3})(\d{3})(\d{4})/;
+    // return phoneNumber.replace(phoneRegex, "($1)-$2-$3");
   };
 
   return (
@@ -110,7 +114,8 @@ const ContactCard = () => {
             type="tel"
             placeholder="Phone*"
             name="phone"
-            onChange={phoneRegex}
+            value={phoneNumber}
+            onChange={formatPhone}
             pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
             required
           />
