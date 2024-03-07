@@ -4,12 +4,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 const ContactCard = () => {
   const [result, setResult] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  // const [phoneNumber, setPhoneNumber] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const phoneRegex = /(\d{3})(\d{3})(\d{4})/;
 
     const formData = new FormData(e.target);
     formData.append("access_key", "96c8992f-ca51-48c7-9f69-73c8fb2912e6");
@@ -41,10 +39,33 @@ const ContactCard = () => {
     });
   };
 
+  // const getFormattedPhoneNumber = (value) => {
+  //   const digits = value.replace(/\D/g, "");
+  // };
+
   const formatPhone = (e) => {
-    const value = e.target.value;
-    const formattedPhoneNumber = getFormattedPhoneNumber(value);
-    setPhoneNumber(formattedPhoneNumber);
+    let value = e.target.value;
+    let phoneNumber = value.replace(/\D/g, "");
+    // const match = phoneNumber.match(/^(\d{3})(\d{3})(\d{4})$/);
+    // console.log(match);
+
+    const size = phoneNumber.length;
+    if (size > 0) {
+      phoneNumber = "(" + phoneNumber;
+    }
+    if (size > 3) {
+      phoneNumber = phoneNumber.slice(0, 4) + ") " + phoneNumber.slice(4, 11);
+    }
+    if (size > 6) {
+      phoneNumber = phoneNumber.slice(0, 9) + "-" + phoneNumber.slice(9);
+    }
+    console.log(phoneNumber);
+    return phoneNumber;
+
+    // if (match) {
+    //   // return "(" + match[1] + ") " + match[2] + "-" + match[3];
+    // }
+
     // const phoneRegex = /(\d{3})(\d{3})(\d{4})/;
     // return phoneNumber.replace(phoneRegex, "($1)-$2-$3");
   };
@@ -75,12 +96,6 @@ const ContactCard = () => {
         onSubmit={handleSubmit}
         className="w-full p-8 my-4 rounded-2xl shadow-xl max-w-full"
       >
-        {/* <input
-          type="hidden"
-          name="redirect"
-          value="https://web3forms.com/success"
-        ></input> */}
-
         <div className="flex">
           <h1 className="font-bold uppercase text-2xl mx-auto">
             Send us a message
@@ -114,9 +129,9 @@ const ContactCard = () => {
             type="tel"
             placeholder="Phone*"
             name="phone"
-            value={phoneNumber}
             onChange={formatPhone}
             pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+            // maxLength="10"
             required
           />
         </div>
