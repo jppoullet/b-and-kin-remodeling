@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const ContactCard = () => {
   const [result, setResult] = useState("");
-  // const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,13 +45,13 @@ const ContactCard = () => {
 
   const formatPhone = (e) => {
     let value = e.target.value;
+    setPhoneNumber(value);
     let phoneNumber = value.replace(/\D/g, "");
     // const match = phoneNumber.match(/^(\d{3})(\d{3})(\d{4})$/);
-    // console.log(match);
 
     const size = phoneNumber.length;
     if (size > 0) {
-      phoneNumber = "(" + phoneNumber;
+      phoneNumber = `(${phoneNumber}`;
     }
     if (size > 3) {
       phoneNumber = phoneNumber.slice(0, 4) + ") " + phoneNumber.slice(4, 11);
@@ -60,12 +60,10 @@ const ContactCard = () => {
       phoneNumber = phoneNumber.slice(0, 9) + "-" + phoneNumber.slice(9);
     }
     console.log(phoneNumber);
-    return phoneNumber;
-
+    setPhoneNumber(phoneNumber);
     // if (match) {
     //   // return "(" + match[1] + ") " + match[2] + "-" + match[3];
     // }
-
     // const phoneRegex = /(\d{3})(\d{3})(\d{4})/;
     // return phoneNumber.replace(phoneRegex, "($1)-$2-$3");
   };
@@ -129,6 +127,7 @@ const ContactCard = () => {
             type="tel"
             placeholder="Phone*"
             name="phone"
+            value={phoneNumber}
             onChange={formatPhone}
             pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
             // maxLength="10"
