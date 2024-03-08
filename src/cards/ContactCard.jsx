@@ -27,7 +27,7 @@ const ContactCard = () => {
 
     document.getElementById("form").reset();
 
-    toast.success(`${res.message} We will contact you shortly`, {
+    toast.success(`${res.message} We will contact you soon, Thank you.`, {
       position: "top-center",
       autoClose: 3500,
       hideProgressBar: true,
@@ -129,8 +129,6 @@ const ContactCard = () => {
             name="phone"
             value={phoneNumber}
             onChange={formatPhone}
-            pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-            // maxLength="10"
             required
           />
         </div>
