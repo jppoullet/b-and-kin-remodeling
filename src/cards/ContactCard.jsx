@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 
 const ContactCard = () => {
   const [result, setResult] = useState("");
@@ -39,15 +40,10 @@ const ContactCard = () => {
     });
   };
 
-  // const getFormattedPhoneNumber = (value) => {
-  //   const digits = value.replace(/\D/g, "");
-  // };
-
   const formatPhone = (e) => {
     let value = e.target.value;
     setPhoneNumber(value);
     let phoneNumber = value.replace(/\D/g, "");
-    // const match = phoneNumber.match(/^(\d{3})(\d{3})(\d{4})$/);
 
     const size = phoneNumber.length;
     if (size > 0) {
@@ -61,29 +57,34 @@ const ContactCard = () => {
     }
     console.log(phoneNumber);
     setPhoneNumber(phoneNumber);
-    // if (match) {
-    //   // return "(" + match[1] + ") " + match[2] + "-" + match[3];
-    // }
-    // const phoneRegex = /(\d{3})(\d{3})(\d{4})/;
-    // return phoneNumber.replace(phoneRegex, "($1)-$2-$3");
   };
 
   return (
     <div>
       <div className="text-center">
-        <h1 className="text-xl font-bold">
+        <h2 className="text-xl font-bold">
           Make your remodeling dreams come true.
           <br />
           Reach out today!
-        </h1>
+        </h2>
         <br />
         <p>
-          <a href="tel:6143906882" className="hover:font-bold">
+          <a
+            href="tel:6143906882"
+            aria-label="Phone Number"
+            className="hover:font-bold flex justify-center items-center gap-3"
+          >
+            <HiOutlinePhone />
             614-390-6882
           </a>
         </p>
         <p>
-          <a href="mailto:" className="hover:font-bold">
+          <a
+            href="mailto:"
+            aria-label="Email Address"
+            className="hover:font-bold flex justify-center items-center gap-3"
+          >
+            <HiOutlineMail />
             bnkin.remodeling@yahoo.com
           </a>
         </p>
@@ -95,9 +96,9 @@ const ContactCard = () => {
         className="w-full p-8 my-4 rounded-2xl shadow-xl max-w-full"
       >
         <div className="flex">
-          <h1 className="font-bold uppercase text-2xl mx-auto">
+          <h2 className="font-bold uppercase text-2xl mx-auto">
             Send us a message
-          </h1>
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">

@@ -69,12 +69,7 @@ const Navbar = () => {
           <FacebookBtn />
 
           {/* Contact Us */}
-
-          <a
-            onClick={() => {
-              document.getElementById("contact-section").scrollIntoView();
-            }}
-          >
+          <a href="#contactSection">
             <Btn>Contact Us</Btn>
           </a>
         </div>
@@ -82,56 +77,32 @@ const Navbar = () => {
         {/* Home - Business Name/Logo */}
         <div className="flex flex-col items-center">
           <div className="text-center text-3xl text-white font-bold no-underline cursor-pointer pb-4">
-            <Link
-              to="/"
-              onClick={() => {
-                setState({ isOpen: false });
-              }}
-            >
+            <a href="/">
               B & Kin
               <br />
               Remodeling
-            </Link>
+            </a>
           </div>
         </div>
 
         {/* Nav Menu */}
         <div className="hidden md:flex text-secondary text-xl justify-end">
-          {/* <a
-            href="#services-section"
-            className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
-          >
-            Services
-          </a> */}
           <a
-            onClick={() => {
-              document.getElementById("gallery-section").scrollIntoView();
-            }}
+            href="#gallerySection"
             className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
           >
             Services
           </a>
 
           <a
-            onClick={() => {
-              document.getElementById("about-section").scrollIntoView();
-            }}
+            href="#aboutSection"
             className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
           >
             About
           </a>
 
-          {/* <a
-            href="#home"
-            className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
-          >
-            Home
-          </a> */}
-
           <a
-            onClick={() => {
-              document.getElementById("home").scrollIntoView();
-            }}
+            href="#home"
             className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
           >
             Home
@@ -182,54 +153,43 @@ const Navbar = () => {
         {/* Mobile Menu Links */}
         <div className="flex flex-col items-center justify-center md:hidden w-full bg-primary text-secondary my-20">
           <a
-            onClick={() => {
-              document.getElementById("home").scrollIntoView();
-              mobileMenuActiveHandler();
-            }}
+            href="#home"
+            onClick={mobileMenuActiveHandler}
             className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
           >
             Home
           </a>
 
           <a
+            href="#servicesSection"
             className="hover:bg-secondary hover:text-primary block p-6 my-0
             w-full text-center"
-            onClick={() => {
-              document.getElementById("gallery-section").scrollIntoView();
-              mobileMenuActiveHandler();
-            }}
+            onClick={mobileMenuActiveHandler}
           >
             Services
           </a>
 
           <a
+            href="#testimonialsSection"
             className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
-            onClick={() => {
-              document.getElementById("testimonials-section").scrollIntoView();
-              mobileMenuActiveHandler();
-            }}
+            onClick={mobileMenuActiveHandler}
           >
             Testimonials
           </a>
 
           <a
-            to="/about"
+            to="#aboutSection"
             className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
-            onClick={() => {
-              document.getElementById("about-section").scrollIntoView();
-              mobileMenuActiveHandler();
-            }}
+            onClick={mobileMenuActiveHandler}
           >
             About
           </a>
         </div>
 
         <a
+          href="#contactSection"
           className="absolute bottom-32"
-          onClick={() => {
-            document.getElementById("contact-section").scrollIntoView();
-            mobileMenuActiveHandler();
-          }}
+          onClick={mobileMenuActiveHandler}
         >
           <Btn>Contact Us</Btn>
         </a>

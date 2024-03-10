@@ -3,7 +3,7 @@ import React from "react";
 const ServicesSection = () => {
   return (
     <div className="text-center w-full">
-      <h1 className="text-2xl font-bold">Services Offered</h1>
+      <h2 className="text-2xl font-bold">Services Offered</h2>
       <br />
       <div className="flex justify-between gap-20">
         <ul>

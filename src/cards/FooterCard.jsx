@@ -1,4 +1,5 @@
 import React from "react";
+import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 
 const FooterCard = () => {
   return (
@@ -7,12 +8,22 @@ const FooterCard = () => {
       <br />
       <p>Benjamin - Owner</p>
       <p>
-        <a href="tel:6143906882" className="hover:font-bold">
+        <a
+          href="tel:6143906882"
+          aria-label="Phone Number"
+          className="hover:font-bold flex justify-center items-center gap-3"
+        >
+          <HiOutlinePhone />
           614-390-6882
         </a>
       </p>
       <p>
-        <a href="mailto:" className="hover:font-bold">
+        <a
+          href="mailto:"
+          aria-label="Email Address"
+          className="hover:font-bold flex justify-center items-center gap-3"
+        >
+          <HiOutlineMail />
           bnkin.remodeling@yahoo.com
         </a>
       </p>

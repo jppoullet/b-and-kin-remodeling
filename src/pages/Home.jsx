@@ -20,22 +20,22 @@ const Home = () => {
       </div>
 
       <div className="mx-auto px-10 max-w-[1000px]">
-        <section id="about-section">
+        <section id="aboutSection">
           <AboutSection />
         </section>
         <div className="flex flex-col items-center">
-          <section id="testimonials-section" className="bg-primary w-screen">
+          <section id="testimonialsSection" className="bg-primary w-screen">
             <TestimonialsSection />
           </section>
-          <section id="gallery-section" className="py-16">
+          <section id="gallerySection" className="py-16">
             <GallerySection />
           </section>
-          <hr className="size-1 bg-primary w-4/5" />
-          <section id="services-section" className="py-16">
+          <hr aria-hidden="true" className="size-1 bg-primary w-4/5" />
+          <section id="servicesSection" className="py-16">
             <ServicesSection />
           </section>
-          <hr className="size-1 bg-primary w-4/5" />
-          <section id="contact-section" className="w-full pt-16">
+          <hr aria-hidden="true" className="size-1 bg-primary w-4/5" />
+          <section id="contactSection" className="w-full pt-16">
             <ContactCard />
           </section>
         </div>

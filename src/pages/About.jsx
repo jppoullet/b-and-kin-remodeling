@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="mx-auto my-5 px-10 max-w-[1000px] text-center">
       <h1 className="font-bold text-xl">
-        In Business Since 2011. Our business is Family owned and operated.{" "}
+        In Business Since 2011. Family owned and operated.{" "}
       </h1>
       <p></p>
       <br />
@@ -18,7 +18,7 @@ const About = () => {
         job is done right.
       </p>
       <br />
-      <h1 className="font-bold text-xl">How We Got Started</h1>
+      <h2 className="font-bold text-xl">How We Got Started</h2>
       <br />
       <p>
         I chose to work in this industry because I love being creative with my
