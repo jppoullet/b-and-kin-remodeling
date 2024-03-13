@@ -18,7 +18,7 @@ const TestimonialsModal = () => {
     <>
       <button
         onClick={toggleDialog}
-        className="md:bg-secondary bg-secondary text-white py-3 px-6 rounded-full shadow-md hover:bg-alternate transition duration-300"
+        className="md:bg-secondary bg-secondary text-white py-3 px-6 rounded-full shadow-md hover:bg-alternate hover:scale-105 transform transition duration-150"
       >
         View Testimonials
       </button>
@@ -27,9 +27,9 @@ const TestimonialsModal = () => {
         className="min-w-full min-h-full text-white  bg-black bg-opacity-90"
       >
         <div>
-          <h1 className="text-center text-2xl pt-20 pb-10">
+          <h2 className="text-center md:text-3xl text-2xl pt-20 pb-10">
             Read what our customers have to say
-          </h1>
+          </h2>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mx-10">
             {reviews.map((review) => (
               <div
@@ -37,8 +37,8 @@ const TestimonialsModal = () => {
                 className="bg-primary text-white rounded-md p-3 shadow-md"
               >
                 <p>{review.Review}</p>
-                <br />
-                <p className="text-secondary">
+
+                <p className="text-secondary mt-2">
                   {review.Name} - {review.Location}
                 </p>
               </div>

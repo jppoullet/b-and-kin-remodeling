@@ -4,12 +4,6 @@ import FacebookBtn from "./FacebookBtn";
 import Btn from "./Btn";
 
 const Navbar = () => {
-  const activeLink = ({ isActive }) => {
-    return isActive
-      ? "text-white font-bold block p-2 my-0 after:block after:h-1 after:w-full after:bg-secondary"
-      : "block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100";
-  };
-
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
   const mobileMenuActiveHandler = () => {
@@ -59,7 +53,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="bg-primary w-full fixed top-0">
+    <nav className="bg-primary w-full fixed top-0 z-50">
       {/* Desktop View */}
       <div className="grid grid-cols-3 items-center mx-10 py-1 md:max-w-[1200px] xl:mx-auto">
         {/* Social Contact Us */}

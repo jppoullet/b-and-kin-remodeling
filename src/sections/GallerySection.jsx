@@ -25,7 +25,7 @@ const GallerySection = () => {
         >
           {homePageImages.map((image) => (
             <img
-              className="w-[220px] inline-block p-2 cursor-point ease-in-out duration-200"
+              className="w-[310px] inline-block p-2 cursor-point ease-in-out duration-200"
               src={image.img}
               alt="/"
               key={image.id}

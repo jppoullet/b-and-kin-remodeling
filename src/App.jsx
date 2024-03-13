@@ -6,7 +6,7 @@ import FooterCard from "./cards/FooterCard";
 
 function App() {
   return (
-    <div className="font-lato">
+    <div className="font-lato md:text-xl text-lg">
       <Navbar />
 
       <main className="mt-[95px]">

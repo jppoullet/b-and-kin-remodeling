@@ -21,7 +21,7 @@ import ShowerVanity from "../assets/images/shower-vanity.jpg";
 import SmallKitchenAfter from "../assets/images/small-kitchen-after.jpg";
 import SmallKitchenBefore from "../assets/images/small-kitchen-before.jpg";
 
-export { HomePageImg, AboutMeImg };
+export { HomePageImg, AboutMeImg, BathroomPosing };
 
 export const images = [
   {
@@ -32,7 +32,7 @@ export const images = [
   {
     id: 2,
     room: "bath",
-    img: Bathroom,
+    img: Shower,
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const images = [
   {
     id: 4,
     room: "bath",
-    img: Shower,
+    img: Bathroom,
   },
   {
     id: 5,

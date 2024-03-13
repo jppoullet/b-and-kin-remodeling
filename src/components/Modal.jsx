@@ -28,46 +28,76 @@ const Modal = () => {
   };
 
   const prevImg = () => {
-    setCurrentImg((currentImg) => (currentImg === 0 ? 0 : currentImg - 1));
+    // setCurrentImg((currentImg) =>
+    //   currentImg === 0 ? images.length - 1 : currentImg - 1
+    // );
     let slider = document.getElementById("sliderr");
-    slider.scrollLeft = slider.scrollLeft - 100;
+    if (currentImg === 0) {
+      slider.scrollTo(10000, 0);
+      setCurrentImg(images.length - 1);
+    } else {
+      slider.scrollLeft = slider.scrollLeft - 100;
+      setCurrentImg(currentImg - 1);
+    }
   };
 
   const nextImg = () => {
-    setCurrentImg((currentImg) =>
-      currentImg === images.length - 1 ? images.length - 1 : currentImg + 1
-    );
+    // setCurrentImg((currentImg) =>
+    //   currentImg === images.length - 1 ? 0 : currentImg + 1
+    // );
+    // // let nextImgBtn = document.getElementById("nextImgBtn");
     let slider = document.getElementById("sliderr");
-    slider.scrollLeft = slider.scrollLeft + 100;
+    if (currentImg === images.length - 1) {
+      slider.scrollTo(0, 0);
+      setCurrentImg(0);
+    } else {
+      slider.scrollLeft = slider.scrollLeft + 100;
+      setCurrentImg(currentImg + 1);
+    }
   };
 
   return (
     <>
       <button
-        className="rounded-full bg-primary text-white py-2 px-5 my-2 shadow-md"
+        className="rounded-full bg-primary text-white py-2 px-5 my-2 shadow-md hover:bg-alternate hover:scale-105 transform transition duration-150"
         onClick={toggleDialog}
       >
         View Our Work
       </button>
       <dialog
         ref={dialogRef}
-        className="min-w-full min-h-full text-white text-6xl bg-black bg-opacity-90"
+        className="min-w-full min-h-full text-white bg-black bg-opacity-90"
       >
         <div className="flex flex-col justify-center items-center">
-          <div className="h-[600px] w-full flex flex-col justify-center relative">
+          <div className="h-[600px] w-full flex justify-center px-9">
+            <div className="flex items-center">
+              <button
+                id="prevImgBtn"
+                className="rounded-full p-2 text-black bg-white opacity-80 hover:opacity-100"
+              >
+                <BsChevronCompactLeft
+                  className="size-5 md:size-8"
+                  onClick={prevImg}
+                />
+              </button>
+            </div>
             <img
               src={images[currentImg].img}
               alt=""
-              className="object-contain h-[600px] px-10"
+              className="object-contain h-[600px] px-0"
             />
-            <div className="flex items-center justify-between absolute w-full">
-              <button className="text-2xl rounded-full p-2 text-black bg-white opacity-80 hover:opacity-100">
-                <BsChevronCompactLeft className="size-5" onClick={prevImg} />
-              </button>
-              <button className="text-2xl rounded-full p-2 text-black bg-white opacity-80 hover:opacity-100">
-                <BsChevronCompactRight className="size-5" onClick={nextImg} />
+            <div className="flex items-center">
+              <button
+                id="nextImgBtn"
+                className="rounded-full p-2 text-black bg-white opacity-80 hover:opacity-100"
+              >
+                <BsChevronCompactRight
+                  className="size-5 md:size-8"
+                  onClick={nextImg}
+                />
               </button>
             </div>
+            {/* <div className="flex items-center justify-between absolute w-full"></div> */}
           </div>
 
           <div className="flex items-center">
@@ -86,6 +116,9 @@ const Modal = () => {
                   src={image.img}
                   alt="/"
                   key={image.id}
+                  onClick={() => {
+                    setCurrentImg(image.img);
+                  }}
                 ></img>
               ))}
             </div>

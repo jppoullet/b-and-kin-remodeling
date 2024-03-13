@@ -62,13 +62,13 @@ const ContactCard = () => {
   return (
     <div>
       <div className="text-center">
-        <h2 className="text-xl font-bold">
+        <h2 className="md:text-3xl text-2xl font-bold">
           Make your remodeling dreams come true.
           <br />
           Reach out today!
         </h2>
-        <br />
-        <p>
+
+        <p className="mt-8">
           <a
             href="tel:6143906882"
             aria-label="Phone Number"
@@ -144,7 +144,7 @@ const ContactCard = () => {
         <div className="my-2 w-1/2 lg:w-1/4 mx-auto">
           <button
             type="submit"
-            className="uppercase text-sm font-bold tracking-wide bg-primary text-white p-3 rounded-lg w-full 
+            className="uppercase tracking-wide bg-primary text-white p-3 rounded-lg w-full 
               focus:outline-none focus:shadow-outline hover:bg-secondary transition duration-500"
           >
             Send Message
