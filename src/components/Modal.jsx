@@ -68,15 +68,15 @@ const Modal = () => {
         ref={dialogRef}
         className="min-w-full min-h-full text-white bg-black bg-opacity-90"
       >
-        <div className="flex flex-col justify-center items-center">
-          <div className="h-[600px] w-full flex justify-center px-9">
+        <div className="flex flex-col items-end">
+          <div className="h-[600px] w-full flex justify-center items-center px-9 md:h-[800px] md:gap-2">
             <div className="flex items-center">
               <button
                 id="prevImgBtn"
                 className="rounded-full p-2 text-black bg-white opacity-80 hover:opacity-100"
               >
                 <BsChevronCompactLeft
-                  className="size-5 md:size-8"
+                  className="size-5 md:size-9"
                   onClick={prevImg}
                 />
               </button>
@@ -84,7 +84,7 @@ const Modal = () => {
             <img
               src={images[currentImg].img}
               alt=""
-              className="object-contain h-[600px] px-0"
+              className="object-contain h-[600px] md:h-full md:w-[800px] px-0"
             />
             <div className="flex items-center">
               <button
@@ -92,7 +92,7 @@ const Modal = () => {
                 className="rounded-full p-2 text-black bg-white opacity-80 hover:opacity-100"
               >
                 <BsChevronCompactRight
-                  className="size-5 md:size-8"
+                  className="size-5 md:size-9"
                   onClick={nextImg}
                 />
               </button>
@@ -101,32 +101,22 @@ const Modal = () => {
           </div>
 
           <div className="flex items-center">
-            {/* <MdChevronLeft
-              className="opacity-50 cursor-pointer hover:opacity-100"
-              size={40}
-              onClick={slideLeft}
-            /> */}
             <div
               id="sliderr"
               className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth no-scrollbar"
             >
-              {images.map((image) => (
+              {images.map((image, index) => (
                 <img
                   className="w-[100px] inline-block p-2 cursor-point hover:scale-105 ease-in-out duration-200"
                   src={image.img}
                   alt="/"
                   key={image.id}
                   onClick={() => {
-                    setCurrentImg(image.img);
+                    setCurrentImg(index);
                   }}
                 ></img>
               ))}
             </div>
-            {/* <MdChevronRight
-              className="opacity-50 cursor-pointer hover:opacity-100"
-              size={40}
-              onClick={slideRight}
-            /> */}
           </div>
 
           <button
