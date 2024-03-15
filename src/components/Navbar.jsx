@@ -172,7 +172,7 @@ const Navbar = () => {
           </a>
 
           <a
-            to="#aboutSection"
+            href="#aboutSection"
             className="hover:bg-secondary hover:text-primary block p-6 my-0 w-full text-center"
             onClick={mobileMenuActiveHandler}
           >
