@@ -5,7 +5,7 @@ const FacebookBtn = () => {
     <button className="bg-secondary p-3 rounded-full hover:bg-alternate transition duration-300">
       <a href="https://www.facebook.com/profile.php?id=100063549162496">
         <svg
-          className="w-6 h-6 text-white dark:text-white"
+          className="w-7 h-7 text-white dark:text-white"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"

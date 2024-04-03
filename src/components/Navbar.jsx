@@ -57,8 +57,8 @@ const Navbar = () => {
       {/* Desktop View */}
       <div className="grid grid-cols-3 items-center mx-10 py-1 md:max-w-[1200px] xl:mx-auto">
         {/* Social Contact Us */}
-        <div className="md:hidden"></div>
-        <div className="hidden md:flex gap-4">
+
+        <div className="hidden md:flex gap-4 items-center">
           {/* Facebook Icon */}
           <FacebookBtn />
 
