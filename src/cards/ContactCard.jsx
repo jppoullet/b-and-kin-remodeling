@@ -68,26 +68,23 @@ const ContactCard = () => {
           Reach out today!
         </h2>
 
-        <p className="mt-8">
-          <a
-            href="tel:6143906882"
-            aria-label="Phone Number"
-            className="hover:font-bold flex justify-center items-center gap-3"
-          >
-            <HiOutlinePhone />
-            614-390-6882
-          </a>
-        </p>
-        <p>
-          <a
-            href="mailto:"
-            aria-label="Email Address"
-            className="hover:font-bold flex justify-center items-center gap-3"
-          >
-            <HiOutlineMail />
-            bnkin.remodeling@yahoo.com
-          </a>
-        </p>
+        <a
+          href="tel:6143906882"
+          aria-label="Phone Number"
+          className="hover:font-bold flex justify-center items-center gap-3 mt-8"
+        >
+          <HiOutlinePhone />
+          614-390-6882
+        </a>
+
+        <a
+          href="mailto:"
+          aria-label="Email Address"
+          className="hover:font-bold flex justify-center items-center gap-3"
+        >
+          <HiOutlineMail />
+          bnkin.remodeling@yahoo.com
+        </a>
       </div>
 
       <form

@@ -55,51 +55,41 @@ const Navbar = () => {
   return (
     <nav className="bg-primary w-full fixed top-0 z-50">
       {/* Desktop View */}
-      <div className="grid grid-cols-3 items-center mx-10 py-1 md:max-w-[1200px] xl:mx-auto">
+      <div className="flex items-center justify-between mx-10 py-6 md:max-w-[1200px] xl:mx-auto">
         {/* Social Contact Us */}
-
-        <div className="hidden md:flex gap-4 items-center">
-          {/* Facebook Icon */}
-          <FacebookBtn />
-
-          {/* Contact Us */}
-          <a href="#contactSection">
-            <Btn>Contact Us</Btn>
-          </a>
-        </div>
 
         {/* Home - Business Name/Logo */}
         <div className="flex flex-col items-center">
-          <div className="text-center text-3xl text-white font-bold no-underline cursor-pointer pb-4">
-            <a href="/">
-              B & Kin
-              <br />
-              Remodeling
-            </a>
+          <div className="text-center text-3xl text-white font-bold no-underline cursor-pointer">
+            <a href="/">B & Kin Remodeling</a>
           </div>
         </div>
 
         {/* Nav Menu */}
         <div className="hidden md:flex text-secondary text-xl justify-end">
           <a
-            href="#gallerySection"
+            href="#home"
             className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
           >
-            Services
+            Home
           </a>
-
           <a
             href="#aboutSection"
             className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
           >
             About
           </a>
-
           <a
-            href="#home"
+            href="#gallerySection"
             className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
           >
-            Home
+            Services
+          </a>
+          <a
+            href="#contactSection"
+            className="block relative p-2 my-0 hover:font-bold after:block after:scale-x-0 after:h-1 after:w-full after:bg-secondary after:transition after:ease-in-out after:duration-200 after:hover:scale-x-100"
+          >
+            Contact
           </a>
         </div>
 
