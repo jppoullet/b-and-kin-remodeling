@@ -1,5 +1,5 @@
 import HomePageImg from "../assets/images/banner-photo.jpg";
-import AboutMeImg from "../assets/images/DSC07714.jpg";
+
 import Bar from "../assets/images/bar-img.jpg";
 import Bathroom from "../assets/images/bathroom-img.jpg";
 import Bathroom2 from "../assets/images/bathroom-img2.jpg";
@@ -20,8 +20,14 @@ import ShowerImgVanity from "../assets/images/shower-img3-vanity.jpg";
 import ShowerVanity from "../assets/images/shower-vanity.jpg";
 import SmallKitchenAfter from "../assets/images/small-kitchen-after.jpg";
 import SmallKitchenBefore from "../assets/images/small-kitchen-before.jpg";
+import BathroomTile2 from "../assets/images/bathroom-tile2.jpeg";
+import KitchenIsland from "../assets/images/kitchen-island.jpeg";
+import KitchenTile from "../assets/images/kitchen-tile.jpeg";
+import KitchenTile2 from "../assets/images/kitchen-tile2.jpeg";
+import LoftAddon1 from "../assets/images/loft-addon1.jpeg";
+import LoftAddon2 from "../assets/images/loft-addon2.jpeg";
 
-export { HomePageImg, AboutMeImg, BathroomPosing };
+export { HomePageImg, BathroomPosing };
 
 export const images = [
   {
@@ -123,6 +129,36 @@ export const images = [
     id: 20,
     room: "kitchen",
     img: SmallKitchenAfter,
+  },
+  {
+    id: 21,
+    room: "bath",
+    img: BathroomTile2,
+  },
+  {
+    id: 22,
+    room: "kitchen",
+    img: KitchenIsland,
+  },
+  {
+    id: 23,
+    room: "kitchen",
+    img: KitchenTile,
+  },
+  {
+    id: 24,
+    room: "kitchen",
+    img: KitchenTile2,
+  },
+  {
+    id: 25,
+    room: "kitchen",
+    img: LoftAddon1,
+  },
+  {
+    id: 26,
+    room: "kitchen",
+    img: LoftAddon2,
   },
 ];
 

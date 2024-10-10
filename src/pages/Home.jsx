@@ -24,7 +24,7 @@ const Home = () => {
           <AboutSection />
         </section>
         <div className="flex flex-col items-center">
-          <section id="testimonialsSection" className="bg-primary w-screen">
+          <section id="testimonialsSection" className="bg-primary w-[99vw]">
             <TestimonialsSection />
           </section>
           <section id="gallerySection" className="py-16">

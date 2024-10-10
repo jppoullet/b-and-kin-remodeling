@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <nav className="bg-primary w-full fixed top-0 z-50">
       {/* Desktop View */}
-      <div className="flex items-center justify-between mx-10 py-6 md:max-w-[1200px] xl:mx-auto">
+      <div className="flex items-center justify-between mx-10 md:py-6 py-8 md:max-w-[1200px] xl:mx-auto">
         {/* Social Contact Us */}
 
         {/* Home - Business Name/Logo */}

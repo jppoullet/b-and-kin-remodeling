@@ -4,6 +4,9 @@
   --toastify-color-success: #5c8374;
 }
 
+* {
+  /* outline: 2px solid red; */
+}
 *,
 *::before,
 *::after {
